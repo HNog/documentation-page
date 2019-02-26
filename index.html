@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">  
+	<title>Useful Linux Terminal Commands for Developers</title>
+</head>
+<body>
+	<nav id="navbar"> 
+	<!-- on laptops and desktops should be on left and visible -->
+		<header id="nav-header">Linux commands documentation</header>
+		<ul id="ul-header">
+			<li><a class="nav-link" href="#Introduction"> Introduction</a></li>
+			<li><a class="nav-link" href="#cd">cd</a></li>
+			<li><a class="nav-link" href="#cd">ls</a></li>
+			<li><a class="nav-link" href="#Typing_spaces_on_the_terminal">Typing spaces on the terminal</a></li>
+			<li><a class="nav-link" href="#history">history</a></li>
+			<li><a class="nav-link" href="#man_/_whatis">man / whatis</a></li>
+			<li><a class="nav-link" href="#mkdir">mkdir</a></li>
+		</ul>
+	</nav>
+	<main id="main-doc">
+		<section class="main-section" id="Introduction">
+			<header class="body-header">Introduction</header>
+			<p>While on Linux terminal a developer has available a set of commands, some of them adds more speed on their work, and they are the following:</p>
+			
+			<p><strong>Note:</strong><em> If you are new to Linux terminal, you might find this <a target="_blank" href="https://www.youtube.com/watch?v=oxuRxtrO2Ag">video</a> useful.</em></p>
+			<p>
+				To open your terminal you can simply find its icon on your menu, or type the keyboard shortcut:
+			</p>
+			<code>Ctrl + Alt + t</code>  
+		</section><br>
+
+		<section class="main-section" id="cd">
+			<header class="body-header">cd</header>
+			<p>Current Directory - used with ' ~ ' will lead us to the home directory.</p>
+			<code>cd ~</code>
+			<p>Typed with a directory name in place of '~' will open in terminal the given directory, useful to navigate in conjunction with the following 'ls' command.</p>
+			<code>cd Documments</code><br>
+			<code>ls</code>
+		</section><br>
+
+		<section class="main-section" id="ls">
+			<header class="body-header">ls</header>
+			<p>Stands for List Storage, it will provide a list of what the directory has, in a list format.
+			</p>
+			<p>It is useful for navigating in the directories with the previous "cd" command </p>
+			<code>ls</code>
+			<ul class="ul-body"> The 'ls' has some vairations:
+				<li><code>ls -a</code></li>
+				<p>Provides a list of everything, including the hidden files.</p>
+				<li><code>ls -l</code></li>
+				<p>Gives additional information about the files.</p>
+				<li><code>ls -la</code></li>
+				<p>Provides information about the hidden files.</p>
+			</ul>
+		</section><br>
+
+		<section class="main-section" id="Typing_spaces_on_the_terminal">
+			<header class="body-header">Typing spaces on the terminal</header>
+			<p>This is not a command, but a way to type it.	Using absolute path we will be able to get those files with spaces in their names.</p>
+			<p>Code example to open a folder with space in name: called new project; inside FCC folder located in Documents directory: </p>
+			<code>cd 'Documents/FCC/new-project'</code>
+			<p>Putting inside little quotes and detailing with the help of LS command we can now open folders and files with spaces in their names, remmembering to put one ' - ' where the space is located.
+			</p>
+		</section><br>
+
+		<section class="main-section" id="history">
+			<header class="body-header">history</header>
+			<p>Will give the log of commands typed in until the last 1000 commands. Useful when you recently have forgotten some typed command and want to check it quickly.</p>
+			<code>history</code>	
+		</section><br>
+
+		<section class="main-section" id="man_/_whatis">
+			<header class="body-header">man / whatis</header>
+			<p>The first stands for manual, and typed alone will show the manual of the terminal. 
+			Used in conjunction with other names after it, like a program name for example. It will provide the given manual, if available.
+			</p>
+			<code>man firefox</code>
+			<p>The code above will bring the Mozilla firefox manual on the terminal</p>
+			<p>While the 'whatis' command will give us a short description of what the given command does.</p>
+			<code>whatis man</code>
+			<p>Resulting in:</p> 
+			<code>man (1) - an interface to the on-line reference manuals</code>
+		</section><br>
+		
+		<section class="main-section" id="mkdir">
+			<header class="body-header">mkdir</header>
+			<p>mkdir for Make Directory, this command line provides us flexibility when operating only via terminal, like when adjusting files/folders before submitting to git-hub.
+			</p>
+			<p>To create a new directory, type:</p>
+			<code>mkdir 'name of the desired directory'</code>
+			<ul class="ul-body"> As we make new directories, there are some commands to undo them:
+				<li><code>rm 'existing file name'</code></li>
+				<p>Will delete the file;</p>
+				<li><code>rm -r 'existing directory name'</code></li>
+				<p>Will delete the directory;</p>
+				<li><code>rmdir 'existing directory name'</code></li>
+				<p>Will delete the directories that have nothing inside;</p>
+			</ul>
+		</section><br>
+	</main>
+
+</body>
+</html>
